@@ -12,7 +12,7 @@ REQUIREMENT_FILE_NAME="requirements.txt"
 
 def get_requirements_list()->List[str]:
     with open(REQUIREMENT_FILE_NAME) as requirement_file:
-        return requirement_file.readlines()
+        return requirement_file.readlines().pop("-e .")
 
 setup(
 name=PROJECT_NAME,  
